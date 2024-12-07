@@ -401,7 +401,15 @@
                                 </else>
                             </choose>
                         </group>
-                        <text macro="URL"/>
+						<text macro="URL"/>
+						<group>
+							<text font-style="italic" value=". Zitiert als: "/>
+							<group delimiter=", ">
+								<text macro="autor-editor-note"/>
+								<text macro="inmonograph"/>
+								<text macro="locator-with-label"/>
+                        	</group>
+						</group>
                     </group>
                 </else-if>
                 <else-if type="chapter">
