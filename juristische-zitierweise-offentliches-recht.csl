@@ -109,9 +109,6 @@
                 </group>
                 <date date-parts="year" form="text" variable="issued" prefix=" "/>
             </if>
-            <else>
-                <date date-parts="year" form="text" variable="issued" prefix=" "/>
-            </else>
         </choose>
     </macro>
     <macro name="inarticle">
