@@ -197,7 +197,7 @@
                 </if>
                 <else-if type="article-magazine" match="all" variable="volume">
                     <group delimiter=", ">
-                        <text macro="author-note"/>
+                        <text macro="author-note" font-style="italic"/>
                         <text macro="inmagazine"/>
                         <group delimiter=" ">
                             <text variable="page-first"/>
