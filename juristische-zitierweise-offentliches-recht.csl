@@ -403,7 +403,7 @@
                         </group>
 						<text macro="URL"/>
 						<group>
-							<text font-style="italic" value=". Zitiert als: "/>
+							<text value=". Zitiert als: "/>
 							<group delimiter=", ">
 								<text macro="autor-editor-note"/>
 								<text macro="inmonograph"/>
