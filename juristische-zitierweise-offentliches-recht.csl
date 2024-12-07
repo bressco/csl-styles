@@ -440,23 +440,44 @@
                     </group>
                 </else-if>
                 <else-if type="entry-encyclopedia">
-                    <text macro="author"/>
                     <group>
-                        <text term="in" prefix=", " suffix=": "/>
                         <group>
-                            <names variable="editor" font-style="normal">
-                                <name delimiter=" / " name-as-sort-order="all"/>
+                            <names variable="editor" font-style="italic">
+                                <name delimiter="/" name-as-sort-order="all"/>
                                 <label form="short" prefix=" (" suffix=")"/>
                             </names>
                             <text variable="container-title" prefix=", " suffix=", "/>
                             <text variable="collection-number"/>
                             <group delimiter=" ">
                                 <number variable="edition" form="ordinal"/>
-                                <text term="edition" suffix=" "/>
+                                <text term="edition" suffix=", "/>
                                 <text variable="publisher-place" suffix=" "/>
                                 <date date-parts="year" form="text" variable="issued"/>
                             </group>
-                            <text variable="title" prefix=", "/>
+                        </group>
+                        <group>
+                            <text value="Zitiert als" prefix=". " suffix=": "/>
+                            <text value="Bearbeiter:in" font-style="italic"/>
+                            <text term="in" prefix=", " suffix=": "/>
+                            <choose>
+                                <if variable="title-short">
+                                    <text variable="title" form="short" suffix=", "/>
+                                </if>
+                                <else>
+                                    <text macro="editor-note" suffix=", "/>
+                                    <text variable="container-title" form="short" suffix=", "/>
+                                </else>
+                            </choose>
+                            <text variable="collection-number" suffix=", "/>
+                            <group>
+                                <choose>
+                                    <if variable="edition">
+                                        <number suffix=" " variable="edition" form="ordinal"/>
+                                        <text term="edition" form="short"/>
+                                    </if>
+                                </choose>
+                                <date date-parts="year" form="text" variable="issued" prefix=" "/>
+                            </group>
                         </group>
                     </group>
                 </else-if>
