@@ -277,7 +277,7 @@
                                     </else-if>
                                     <else>
 										<group delimiter=" ">
-											<text variable="container-title" suffix=", "/>
+											<text variable="container-title"/>
 											<text variable="volume"/>
                                         </group>
                                     </else>
