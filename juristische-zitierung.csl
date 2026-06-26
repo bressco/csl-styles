@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<style class="note" default-locale="de-AT" delimiter-precedes-et-al="never" delimiter-precedes-last="never" demote-non-dropping-particle="never" et-al-min="11" et-al-use-first="10" initialize="false" page-range-format="expanded" version="1.0" xmlns="http://purl.org/net/xbiblio/csl">
+<style class="note" default-locale="de-DE" delimiter-precedes-et-al="never" delimiter-precedes-last="never" demote-non-dropping-particle="never" et-al-min="11" et-al-use-first="10" initialize="false" page-range-format="expanded" version="1.0" xmlns="http://purl.org/net/xbiblio/csl">
   <info>
-    <title>Mohr Siebeck - Recht (Deutsch - Österreich)</title>
-    <id>http://www.zotero.org/styles/mohr-siebeck-recht</id>
-    <link href="http://www.zotero.org/styles/mohr-siebeck-recht" rel="self"></link>
-    <link href="http://www.mohr.de/fileadmin/user_upload/Hinweise_Autoren_PDF/Merkblaetter/merkjura2006.pdf" rel="documentation"></link>
+    <title>Juristische Zitierung mit PID</title>
+    <id>http://www.zotero.org/styles/juristische-zitierung</id>
+    <link href="http://www.zotero.org/styles/juristische-zitierung" rel="self"></link>
+    <link href="http://www.zotero.org/styles/mohr-siebeck-recht" rel="template"></link>
     <author>
-      <name>Christopher Rüther</name>
-      <email>dcruether@web.de</email>
+      <name>Constantin Breß</name>
+      <email>constantin.bress@partner.kit.edu</email>
+      <uri>https://orcid.org/0000-0002-2133-1541</uri>
     </author>
     <category citation-format="note"></category>
     <category field="law"></category>
-    <summary>Kommentare sind als "report" zu kategorisieren, um richtig zitiert werden zu können. Gibt es keinen einheitlichen Autor oder Herausgeber bei Kommentaren, sondern nur einen Redakteur, ist dieser als Translator anzugeben, um im Literaturverzeichnis ordnungsgemäß zu erscheinen.</summary>
+    <summary>Kommentare sind als "entry-encyclopedia" zu kategorisieren, um richtig zitiert werden zu können. Zitierstil basiert auf Mohr Siebeck - Recht (Deutsch - Österreich) und erweitert diesen um verschiedene Arten von IDs wie der ECLI bei Urteilen oder die ISBN bei Monographien.</summary>
     <updated>2021-11-13T18:15:14+00:00</updated>
     <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License</rights>
   </info>
@@ -159,7 +160,7 @@
             </else-if>
             <else-if match="any" type="webpage">
               <text form="short" suffix=", " variable="title"></text>
-              <text prefix="&lt;" suffix=">, " variable="URL"></text>
+              <text prefix="&lt;" suffix=">     , " variable="URL"></text>
               <date form="numeric" prefix="Stand " variable="accessed"></date>
             </else-if>
             <else-if match="any" type="article-newspaper">
